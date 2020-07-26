@@ -9,19 +9,25 @@ rl.on('line', (line) => {
   lines.push(line);
 });
 
-function solve(n) {
+function isPrime(n) {
   if (n === 1) {
-    return ('Composite');
-  }
-  if (n === 2) {
-    return ('Prime');
+    return false;
   }
   for (let i = 2; i < n; i += 1) {
     if (n % i === 0) {
-      return ('Composite');
+      return false;
     }
   }
-  return ('Prime');
+  return true;
+}
+
+function solve(data) {
+  for (let i = 1; i < data.length; i += 1) {
+    if (isPrime(Number(data[i])) === true) {
+      console.log('Prime');
+    }
+    console.log('Composite');
+  }
 }
 
 rl.on('close', () => {
