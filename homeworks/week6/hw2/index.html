@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>新拖延運動報名表單</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+
+	<style type="text/css">
+		body{
+			font-family: 微軟正黑體;
+			background-color: #f0f0f0;
+		}
+		#section_overview{
+			width: 645px;
+			margin: 10% auto;
+			background-color: #fff;
+		}
+		#section_overview form{
+			padding: 7%;
+		}
+		#section_overview span{
+			color: #e74149;
+		}
+		#section_overview h1{
+			font-size: 36px;
+		}
+		#section_overview h3{
+			font-weight: normal;
+			font-size: 20px;
+		}
+		#section_overview p{
+			font-size: 14px;
+			line-height: 1.6;
+		}
+		#section_overview input{
+			width: 50%;
+		}
+		#section_overview .question_part{
+			margin: 10% 0;
+		}
+		#section_overview .radio_question input{
+			width: 5%;
+			margin-bottom: 4%;
+		}
+		#section_overview .submit_button input{
+			width: 92px;
+			height: 40px;
+			border: 0;
+			border-radius: 3px;
+            background-color: #fad312;
+		}
+		.deco_top{
+			width: 100%;
+			height: 8px;
+			border: 0;
+			background-color: #fad312;
+		}
+		footer{
+			width: 100%;
+			color: #999999;
+			padding: 2% 0; 
+			text-align: center;
+			background-color: #000; 
+		}
+	</style>
+</head>
+<body>	
+	<div id="section_overview">
+		<div class="deco_top"></div>
+		<form>
+			<div>
+				<h1>新拖延運動報名表單</h1>
+				<p>活動日期：2020/12/10 ~ 2020/12/11<br>活動地點：台北市大安區新生南路二段 1 號
+				</p>
+				<span>* 必填</span>
+			</div>
+			<div class="question_part">
+				<h3>暱稱 <span>*</span></h3>
+				<input type="text" name="name" placeholder="您的回答"></input>  
+			</div>
+			<div class="question_part">
+				<h3>電子郵件 <span>*</span></h3>
+				<input type="text" name="e-mail" placeholder="您的電子郵件"></input>  
+			</div>
+			<div>
+				<h3>手機號碼 <span>*</span></h3>
+				<input type="text" name="phone_number" placeholder="您的手機號碼"></input>  
+			</div>
+			<div class="question_part radio_question">
+				<h3>報名類型 <span>*</span></h3>
+				<input type="radio" name="category" value="bed"> 躺在床上用想像力實作</input><br>
+				<input type="radio" name="category" value="ground"> 趴在地上滑手機找現成的</input>    
+			</div>
+			<div class="question_part">
+				<h3>怎麼知道這個活動的？ <span>*</span></h3>
+				<input type="text" name="how" placeholder="您的回答"></input>  
+			</div>
+			<div class="question_part">
+				<h3>其他</h3>
+				<p>對活動的一些建議</p>
+				<input type="text" name="other" placeholder="您的回答"></input>  
+			</div>
+			<div class="submit_button">
+				<input type="submit" value="提交"></input>  
+			</div>
+			<p>請勿透過表單送出您的密碼。</p>
+		</form>
+	</div>
+	<footer>© 2020 © Copyright. All rights Reserved.</footer>
+</body>
+</html>
