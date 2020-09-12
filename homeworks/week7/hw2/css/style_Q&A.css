@@ -1,0 +1,84 @@
+/*================Section 1===================*/
+#QA{
+	margin-top: 100px;
+	user-select: none;
+}
+#QA .faq-question{
+	font-family: 微軟正黑體;
+	text-align: left;
+	line-height: 2.1;
+	margin: 0 auto 0;
+	width: 40%;
+}
+#QA .faq-number{
+	font-family: Questrial;
+	font-size: 24px;
+	font-weight: bold;
+	color: #70b282;
+	text-align: left;
+	margin-top: 13px;
+}
+#QA hr{
+	background-color: #a3dea2;
+	width: 42%;
+}
+#QA .faq-question{
+	display: flex;
+}
+#QA .section-faq .faq-answer{
+	margin-left: 10px;
+    overflow: hidden;
+    height: 75px;
+}
+#QA .section-faq .faq-answer-show{
+	height: auto;
+}
+@media (max-width: 1366px) {
+#QA .faq-question{
+	width: 50%;
+    }
+#QA hr{
+	width: 52%;
+	}
+}
+
+@media (max-width: 900px) {
+#QA{
+	margin-top: 15%;
+	}
+#QA .faq-question{
+	width: 70%;
+    }
+#QA hr{
+	width: 72%;
+	}	
+}
+@media (max-width: 768px) {
+#QA{
+	margin-top: 25%;
+	}
+#QA .faq-question{
+	width: 80%;
+    }
+#QA hr{
+	width: 82%;
+	}
+}
+
+
+
+
+@media (max-width: 550px) {
+#QA{
+	margin-top: 35%;
+	}
+#QA .section-button {
+	flex-wrap: wrap;
+	margin-bottom: 1%;
+	}
+#QA .section-button button{
+	padding: 15%;
+	}	
+#QA .section-button .order{
+	margin-bottom: 5%;
+	}
