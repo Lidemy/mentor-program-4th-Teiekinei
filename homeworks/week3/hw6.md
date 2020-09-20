@@ -27,3 +27,7 @@ eslint 修改的時候總是會遇到 "" was-used before it was defined
 發現自己常常會忘記 return
 
 ## hw5：聯誼順序比大小
+一開始不知道怎麼寫，後來發現了 Number，但測不過。得到了提示表示 Number 存取只能到 2^53，但期間不知道該查什麼關鍵字才能找到可以用的結果拖了好久。某次突然想到一查就發現了 BigInt 的用法，也查了相關的說明(註)。中間還遇到一些問題，例如修改時沒注意到少了大括號、或是 for loop 的起點(忘記第一個輸入值是組數)，還有修改變數時改了上面忘了下面之類，雖然可能以後看起來很蠢，但我想只要記得這些並且好好注意，應該會是很好的學習與成長吧！
+
+註 [MDN - BigInt](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 
+
