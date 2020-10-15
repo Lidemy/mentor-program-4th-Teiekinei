@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Just A Bite!</title>
+	<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/style_Q&A.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<nav>
+		<h2><a href="index.html">Just A Bite!</a></h2>
+		<div class="nav-button">
+			<button class="button_1">抽個大獎</button>
+			<button class="button_2">我要點餐</button>
+			<button class="button_3">查詢訂單</button>
+			<button class="button_4" onclick="location.href='Q&A.html'">常見問題</button>
+		</div>
+	</nav>
+	<section id="QA">
+		<h2 class="section-title">常見問題</h2>
+		<div class="section-faq">
+			<div class="faq-question">
+				<div class="faq-number">Q1:</div>
+				<div class="faq-answer">
+					<h3>如何辦理退貨?</h3>
+					<p>請於收到商品10天猶豫期內(含例假日)，至會員專區線上申請退貨，並將完整商品、贈品、附件連同勾選完成的出貨明細表一併包裝妥善，憑退貨便代碼在48小時內，至7-ELEVEN ibon列印單據後，於櫃檯完成寄件。</p>
+				</div> 
+			</div>
+			<hr>
+			<div class="faq-question">
+				<div class="faq-number">Q2:</div>
+				<div class="faq-answer">
+					<h3>目前提供哪些付款方式？</h3>
+					<p>請於收到商品10天猶豫期內(含例假日)，至會員專區線上申請退貨，並將完整商品、贈品、附件連同勾選完成的出貨明細表一併包裝妥善，憑退貨便代碼在48小時內，至7-ELEVEN ibon列印單據後，於櫃檯完成寄件。</p>
+				</div> 
+			</div>
+			<hr>
+			<div class="faq-question">
+				<div class="faq-number">Q3:</div>
+				<div class="faq-answer">
+					<h3>線上刷卡如何操作呢？</h3>
+					<p>請於收到商品10天猶豫期內(含例假日)，至會員專區線上申請退貨，並將完整商品、贈品、附件連同勾選完成的出貨明細表一併包裝妥善，憑退貨便代碼在48小時內，至7-ELEVEN ibon列印單據後，於櫃檯完成寄件。</p>
+				</div> 
+			</div>
+			<hr>
+			<div class="faq-question">
+				<div class="faq-number">Q4:</div>
+				<div class="faq-answer">
+					<h3>如何查詢目前訂單的處理情況？</h3>
+					<p>請於收到商品10天猶豫期內(含例假日)，至會員專區線上申請退貨，並將完整商品、贈品、附件連同勾選完成的出貨明細表一併包裝妥善，憑退貨便代碼在48小時內，至7-ELEVEN ibon列印單據後，於櫃檯完成寄件。</p>
+				</div> 
+			</div>
+			<hr>
+			<div class="faq-question">
+				<div class="faq-number">Q5:</div>
+				<div class="faq-answer">
+					<h3>訂單成立後，是否可以取消或是更改訂單數量及商品？</h3>
+					<p>請於收到商品10天猶豫期內(含例假日)，至會員專區線上申請退貨，並將完整商品、贈品、附件連同勾選完成的出貨明細表一併包裝妥善，憑退貨便代碼在48小時內，至7-ELEVEN ibon列印單據後，於櫃檯完成寄件。</p>
+				</div> 
+			</div>
+			<hr>
+			<div class="faq-question">
+				<div class="faq-number">Q6:</div>
+				<div class="faq-answer">
+					<h3>我想購買的商品已經缺貨，什麼時候會進貨呢？</h3>
+					<p>請於收到商品10天猶豫期內(含例假日)，至會員專區線上申請退貨，並將完整商品、贈品、附件連同勾選完成的出貨明細表一併包裝妥善，憑退貨便代碼在48小時內，至7-ELEVEN ibon列印單據後，於櫃檯完成寄件。</p>
+				</div> 
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="section-footer">
+			<div class="contact">
+				<p>餐館地址：天上地下天堂路三分之一里六段520號</p>
+				<p>訂位專線：02-1314-5566</p>
+				<p>營業時間：週一〜週五 09:00~18:00 / 週六、週日、國定假日（含連假）休息</p>
+				<p>email：service@justabite.com.tw</p>
+			</div>
+			<div class="sns">
+				<h2>Just A Bite!</h2>
+				<p>Facebook / Instagram / Youtube</p>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>Copyright © 2020 Just A Bite All Rights Reserved. 咬一口股份有限公司版權所有</p>
+		</div>	
+	</footer>
+	<script type="text/javascript">
+		document.querySelector('.section-faq')
+          .addEventListener('click', function(e) {
+                const element = closest(e.target, 'faq-answer')
+          if (element) {
+            element.classList.toggle('faq-answer-show')
+          }
+        })
+
+      function closestRecursive(node, className) {
+        if (!node || !node.classList) return null
+        if(node.classList.contains(className)) {
+          return node
+        }
+        return closestRecursive(node.parentNode, className)
+      }
+
+      function closest(node, className) {
+        while(node && node.classList) {
+          if (node.classList.contains(className)) {
+            return node
+          }
+          node = node.parentNode
+        }
+      } 
+	</script>
+	</body>
+</html>
