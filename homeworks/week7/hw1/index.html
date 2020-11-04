@@ -47,8 +47,10 @@
 			border: 0;
 			border-radius: 3px;
             background-color: #fad312;
+            outline: none;
 		}
 		#section_overview .reminder .reminder_part{
+			margin-top: 5px;
 			color: #e74149;
 			position: absolute;
 		}
@@ -87,7 +89,7 @@
 			</div>
 			<div class="question_part reminder reminder_hide">
 				<h3>電子郵件 <span>*</span></h3>
-				<input type="email" name="e-mail" placeholder="您的電子郵件" /> 
+				<input type="text" name="e-mail" placeholder="您的電子郵件" /> 
 				<div class="reminder_part">請輸入電子郵件</div>
 			</div>
 			<div class="question_part reminder reminder_hide">
@@ -95,11 +97,12 @@
 				<input type="text" name="phone_number" placeholder="您的手機號碼" />
 				<div class="reminder_part">請輸入手機號碼</div> 
 			</div>
-			<div class="question_part radio_questions">
+			<div class="question_part radio_questions reminder reminder_hide">
 				<h3>報名類型 <span>*</span></h3>
-				<label><input type="radio" name="category" value="bed" /> 躺在床上用想像力實作</label>
+				<label><input type="radio" name="category" value="躺在床上用想像力實作" /> 躺在床上用想像力實作</label>
 				<br>
-				<label><input type="radio" name="category" value="ground" /> 趴在地上滑手機找現成的</label>
+				<label><input type="radio" name="category" value="趴在地上滑手機找現成的" /> 趴在地上滑手機找現成的</label>
+				<div class="reminder_part">請勾選選項</div>
 			</div>
 			<div class="question_part reminder reminder_hide">
 				<h3>怎麼知道這個活動的？ <span>*</span></h3>
@@ -122,20 +125,39 @@
 		document
 		  .querySelector('form')
 		  .addEventListener('submit', function(e){
-			e.prventDefault()
+			e.preventDefault()
 			let hasError = false
-			let values = {}
-			const inputs = document.querySelectorAll('.reminder input[type=text]')
 
-			for(let input of inputs) {
-				values[input.name] = input.value
+			const inputs = document.querySelectorAll('.reminder input[type=text]')
+			for(let input of inputs) {			
 				if(!input.value){
-					console.log(input.parentNode)
 				  input.parentNode.classList.remove('reminder_hide')
+				  
 				  hasError = true
 				} else{
 				  input.parentNode.classList.add('reminder_hide')	
-				}			
+				}
+			}	
+			const radios = document.querySelectorAll('.reminder input[type=radio]')
+			for(let radio of radios) {	
+				let hasValue = [...radios].some(radio => radio.checked)		
+				if(!hasValue){
+				  	radio.parentNode.parentNode.classList.remove('reminder_hide')
+				  	
+				  	hasError = true
+				} else{
+				  radio.parentNode.parentNode.classList.add('reminder_hide')	
+				}	
+			}
+			if(inputs){
+				const inputElement = document.getElementsByTagName('input');
+ 				const name = inputElement[0].value;
+ 				const email = inputElement[1].value;
+ 				const phone = inputElement[2].value;		
+ 				const type = inputElement[3].value;
+ 				if (!hasError){
+				alert ("你的暱稱是 " + name + "\n電子郵件是 " + email + "\n手機號碼是 " + phone + "\n報名類型是 " + type + "\n報名類型是 ")
+				}
 			}
 		})
 	</script>
